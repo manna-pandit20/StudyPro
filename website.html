@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideGenius | Assignment Experts</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0f172a;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        /* Gen Z Gradients */
+        .gradient-text {
+            background: linear-gradient(to right, #c084fc, #6366f1);
+            -webkit-background-clip: text;
+            background-clip: text; /* Added standard property to fix warning */
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6366f1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/10 bg-slate-900/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold gradient-text tracking-tighter">SlideGenius.</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-purple-400 transition px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#pricing" class="hover:text-purple-400 transition px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
+                        <a href="#order" class="gradient-bg hover:opacity-90 transition px-4 py-2 rounded-full text-sm font-bold text-white shadow-lg shadow-purple-500/30">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 relative overflow-hidden">
+        <!-- Background blobs -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Stop Stressing. <br>
+                <span class="gradient-text">Start Achieving.</span>
+            </h1>
+            <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+                Professional PowerPoint Presentations and Assignments for students worldwide. 
+                Flat rates. Fast delivery. Top grades.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#order" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:scale-105 transition transform">Order Now</a>
+                <a href="#pricing" class="border border-white/20 bg-white/5 px-8 py-3 rounded-full font-bold hover:bg-white/10 transition">View Prices</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Pricing Section -->
+    <section id="pricing" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple Pricing</h2>
+                <p class="text-slate-400">No hidden fees. Global currency accepted.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- PPT Card -->
+                <div class="glass-card p-8 rounded-2xl hover:border-purple-500/50 transition duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="p-3 bg-purple-500/20 rounded-lg text-purple-400">
+                            <i data-lucide="presentation" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-white">$10</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">PowerPoint Presentation</h3>
+                    <p class="text-slate-400 mb-6 text-sm">Professional slides, animations, and creative design.</p>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Max 10 Slides</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Custom Graphics</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Delivery: <span class="text-white font-bold">2 Days</span></li>
+                    </ul>
+                    <button onclick="selectService('ppt')" class="w-full py-3 rounded-xl border border-white/20 hover:bg-purple-600 hover:border-transparent transition font-bold">Select PPT</button>
+                </div>
+
+                <!-- Assignment Card -->
+                <div class="glass-card p-8 rounded-2xl hover:border-blue-500/50 transition duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="p-3 bg-blue-500/20 rounded-lg text-blue-400">
+                            <i data-lucide="file-text" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-white">$7</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Assignment Writing</h3>
+                    <p class="text-slate-400 mb-6 text-sm">Well-researched, plagiarism-free academic writing.</p>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> 500 Words</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Harvard/APA Referencing</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Delivery: <span class="text-white font-bold">5 Days</span></li>
+                    </ul>
+                    <button onclick="selectService('assignment')" class="w-full py-3 rounded-xl border border-white/20 hover:bg-blue-600 hover:border-transparent transition font-bold">Select Assignment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="py-20 px-4 relative">
+        <div class="max-w-3xl mx-auto glass-card p-8 md:p-12 rounded-3xl shadow-2xl border-white/5">
+            <h2 class="text-3xl font-bold mb-8 text-center">Place Your Order</h2>
+            
+            <form id="orderForm" class="space-y-6" onsubmit="submitOrder(event)">
+                <!-- Name & Email -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Full Name</label>
+                        <input type="text" required class="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition text-white" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Email Address</label>
+                        <input type="email" required class="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition text-white" placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <!-- Service Selection -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">Service Type</label>
+                    <select id="serviceType" onchange="updateDelivery()" class="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition text-white appearance-none">
+                        <option value="ppt">PowerPoint Presentation ($10)</option>
+                        <option value="assignment">Assignment Writing ($7)</option>
+                    </select>
+                </div>
+
+                <!-- Topic -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">Topic / Title</label>
+                    <input type="text" required class="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition text-white" placeholder="e.g., History of Roman Empire">
+                </div>
+
+                <!-- Details -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">Instructions & Requirements</label>
+                    <textarea rows="4" required class="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition text-white" placeholder="Describe what you need..."></textarea>
+                </div>
+
+                <!-- File Upload -->
+                <div class="border-2 border-dashed border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition cursor-pointer">
+                    <i data-lucide="upload-cloud" class="mx-auto h-8 w-8 text-slate-400 mb-2"></i>
+                    <p class="text-sm text-slate-400">Upload any reference materials (PDF, Docx, Images)</p>
+                    <input type="file" class="hidden">
+                </div>
+
+                <!-- Delivery Info -->
+                <div class="bg-slate-800/30 p-4 rounded-lg flex justify-between items-center">
+                    <span class="text-slate-400">Estimated Delivery:</span>
+                    <span id="deliveryTime" class="text-purple-400 font-bold">2 Days</span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn" class="w-full gradient-bg py-4 rounded-xl font-bold text-lg shadow-lg shadow-purple-500/25 hover:opacity-90 transition transform hover:-translate-y-1">
+                    Proceed to Payment ($10)
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-10 text-center text-slate-500 text-sm">
+        <p>&copy; 2023 SlideGenius. Helping students globally.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Function to change dropdown when clicking "Select" buttons on Pricing cards
+        function selectService(type) {
+            const select = document.getElementById('serviceType');
+            select.value = type;
+            updateDelivery(); // Update time and price
+            
+            // Smooth scroll to form
+            document.getElementById('order').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // Function to update Price and Delivery Time based on dropdown
+        function updateDelivery() {
+            const select = document.getElementById('serviceType');
+            const deliveryText = document.getElementById('deliveryTime');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (select.value === 'ppt') {
+                deliveryText.innerText = "2 Days";
+                submitBtn.innerText = "Proceed to Payment ($10)";
+            } else {
+                deliveryText.innerText = "5 Days";
+                submitBtn.innerText = "Proceed to Payment ($7)";
+            }
+        }
+
+        // Form Submission (Mockup)
+        function submitOrder(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "Processing...";
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            // Simulate payment processing
+            setTimeout(() => {
+                alert("Thank you! Your order has been received. We will contact you via email for payment.");
+                btn.innerText = originalText;
+                btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                document.getElementById('orderForm').reset();
+                updateDelivery();
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
